@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{..//mgmt}
+\usepackage{..//slides}
+\usepackage{..//inno}
+\usepackage[normalem]{ulem}
+\newcommand*\thetitle{Менеджмент/}
+\newcommand*\thesubtitle{Признаки и роли менеджера}
+\begin{document}
+
+    \plush{\innoTitlePage{1}}
+
+    \plush{%
+        \LARGE{Менеджер}
+    }
+
+    \plush{%
+        \innoSection{Признаки менеджера}
+        \begin{multicols}{2}
+            \small
+            \begin{enumerate}
+                \item Менеджер - специалист
+                \item Занимает определенную должность
+                \item Нацеленность на конечный результат и внимательность к деталям
+                \item Сочетание принципиальности и дисциплины
+                \item Принимает управленческие решения
+                \item Имеет власть
+                \par\columnbreak
+                \innoSection{и его Роли}
+                \item[1.] Судья
+                \item[2.] Дипломат
+                \item[3.] Инноватор
+                \item[4.] \sout{Воспитатель}
+            \end{enumerate}
+        \end{multicols}\par
+    }
+
+    \plush{%
+        \LARGE{Должен ли менеджер быть лидером?}
+    }
+
+    \plush{%
+        \center
+        ...Насколько я понимаю, быть лидером означает иметь харизму, чтобы заставить людей делать то, что вам нужно.
+        Но это полностью противоречит тому, что мы только что обсудили.
+        Менеджер не хочет, чтобы люди делали то, что нужно, из-за его харизмы.
+        Вместо этого он хочет, чтобы люди были руководителями своих собственных задач.
+    }
+
+    \plush[3]{%
+        \innoSection{Книга}
+        \begin{multicols}{1}
+            \innoBook{pmbok}
+            {Project Management Institute}
+            {PMBOK}
+            \par\columnbreak
+        \end{multicols}
+    }
+
+    \plush{%
+        \innoQR[3in]{https://www.yegor256.com/tag/management.html}\par
+        Интересные статьи про менеджмент(ENG)
+    }
+
+    \plush{
+        \Huge{Q\&A}
+    }
+
+\end{document}
