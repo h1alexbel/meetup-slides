@@ -22,7 +22,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage[russian]{babel}
-\ProvidesPackage{mgmt}[00.00.0000 0.0.0 This Course Specials]
+\ProvidesPackage{cover}[00.00.0000 0.0.0 This Course Specials]
 
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
@@ -30,55 +30,36 @@
 \RequirePackage[static]{clicks}
 \RequirePackage{href-ul}
 \RequirePackage{graphicx}
-  \graphicspath{{../images/}}
+\graphicspath{{../images/}}
 
 \newcommand\innoDisclaimer{{%
-  \color{grey}\ttfamily\footnotesize
-  All visual and text materials presented in this slidedeck are
-  either originally made by the author or taken from public Internet
-  sources, such as website. Copyright belongs to their
-  respected authors.\par
+    \color{grey}\ttfamily\footnotesize
+    All visual and text materials presented in this slidedeck are
+    either originally made by the author or taken from public Internet
+    sources, such as website. Copyright belongs to their
+    respected authors.\par
 }}
 
-\newcommand\innoTitlePage[1]{%
-  \innoTitle{\thetitle}{\thesubtitle}\par
-  {\scshape Белявский Алексей}\par
-  Семинар №2 \br
-  15 мин\par
-  \innoDisclaimer{}
+\newcommand\defaultInnoTitlePage{%
+    \innoTitle{\thetitle}{\thesubtitle}\par
+    {\scshape Белявский Алексей, 21 ДКС}\par
+    Minsk, Belarus \br
+    Designed in \LaTeX\par
 }
 
-\newcommand\defaultInnoTitlePage[1]{%
-  \innoTitle{\thetitle}{\thesubtitle}\par
-  {\scshape Белявский Алексей}\par
-  15 мин\par
-  \innoDisclaimer{}
-}
-
-\newcommand\innoTitlePageFayol[1]{%
-  \innoTitle{\thetitle}{\thesubtitle}\par
-  {\scshape Белявский Алексей}\par
-  Семинар №3 \br
-  10 мин\par
-  \innoDisclaimer{}
-}
-
-% 1: cover file
-% 2: author
-% 3: title
 \newcommand\innoBook[3]{%
-  \innoPic{0.4}{books/#1} \br ``#3'' by {\scshape #2}
+    \innoPic{0.4}{books/#1} \br ``#3'' by {\scshape #2}
 }
 
 \newcommand\innoBVC{%
-  \innoChapter[B.V.C.]{Books, Venues, Call-to-Action}
+    \innoChapter[B.V.C.]{Books, Venues, Call-to-Action}
 }
 
 \newcommand\nospell[1]{#1}
 
 \AtBeginDocument{%
-  \innoLeft{\thetitle{} \thesubtitle}%
-  \innoRight{@h1alexbel}%
+    \innoLeft{\thetitle{} \thesubtitle}%
+    \innoRight{@h1alexbel}%
 }
 
 \endinput
