@@ -28,17 +28,17 @@
 \ProcessOptions\relax
 
 \RequirePackage{geometry}
-  \geometry{paperwidth=16in, paperheight=9in, left=4in, right=2in, top=1.5in, bottom=1.5in}
+\geometry{paperwidth=16in, paperheight=9in, left=4in, right=2in, top=1.5in, bottom=1.5in}
 \RequirePackage[absolute]{textpos}
-  \TPGrid{16}{16}
+\TPGrid{16}{16}
 \RequirePackage{xcolor}
-  \definecolor{white}{HTML}{EEEEEE}
-  \definecolor{red}{HTML}{ED474A}
-  \definecolor{orange}{HTML}{F06543}
-  \definecolor{black}{HTML}{232527}
-  \definecolor{grey}{HTML}{C0BCB5}
-  \definecolor{green}{HTML}{5C946E}
-  \definecolor{blue}{HTML}{5299D3}
+\definecolor{white}{HTML}{EEEEEE}
+\definecolor{red}{HTML}{ED474A}
+\definecolor{orange}{HTML}{F06543}
+\definecolor{black}{HTML}{232527}
+\definecolor{grey}{HTML}{C0BCB5}
+\definecolor{green}{HTML}{5C946E}
+\definecolor{blue}{HTML}{5299D3}
 \RequirePackage{pagecolor}
 \RequirePackage[tt=false,type1=true]{libertine}
 \RequirePackage{microtype}
@@ -56,70 +56,70 @@
 \RequirePackage{amsmath}
 \RequirePackage{soul}
 \RequirePackage{tikz}
-  \RequirePackage{tikzpagenodes}
-  \usetikzlibrary{arrows}
-  \usetikzlibrary{decorations}
-  \usetikzlibrary{decorations.pathmorphing}
-  \usetikzlibrary{intersections}
-  \usetikzlibrary{positioning}
-  \usetikzlibrary{backgrounds}
-  \usetikzlibrary{calc}
-  \usetikzlibrary{shapes.arrows}
+\RequirePackage{tikzpagenodes}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{intersections}
+\usetikzlibrary{positioning}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes.arrows}
 \RequirePackage{crumbs}
 
 \RequirePackage{fancyhdr}
-  \pagestyle{fancy}
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyhf{}
-  \renewcommand\crumb[2]{%
-    \ifnum\value{crumbi}=1\else\hspace{1em}\fi
-    \ifnum\value{crumbi}=\value{section}%
-      {\setulcolor{blue}\color{blue}\ul{#1}}%
-    \else%
-      #1%
-    \fi%
-  }
-  \renewcommand\subcrumb[2]{%
-    \ifnum\value{subcrumbi}=1\else\hspace{0.5em}\fi
-    \ifnum\value{subcrumbi}=\value{subsection}%
-      {\setulcolor{blue}\color{blue}\ul{#1}}%
-    \else%
-      #1%
-    \fi%
-  }
-  \fancyhead[L]{%
-    \ifx\crumbs\empty\else
-      \begin{textblock}{12}(1,1)%
-        \ifnum\value{section}=0\else
-          {\small\ttfamily\crumbs}
-          \ifnum\value{subsection}=0\else
-            \\[6pt]
-            {\quad\scriptsize\ttfamily\color{gray}[ \subcrumbs{} ]}
-          \fi
-        \fi
-      \end{textblock}%
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\renewcommand\crumb[2]{%
+  \ifnum\value{crumbi}=1\else\hspace{1em}\fi
+  \ifnum\value{crumbi}=\value{section}%
+  {\setulcolor{blue}\color{blue}\ul{#1}}%
+  \else%
+  #1%
+  \fi%
+}
+\renewcommand\subcrumb[2]{%
+  \ifnum\value{subcrumbi}=1\else\hspace{0.5em}\fi
+  \ifnum\value{subcrumbi}=\value{subsection}%
+  {\setulcolor{blue}\color{blue}\ul{#1}}%
+  \else%
+  #1%
+  \fi%
+}
+\fancyhead[L]{%
+  \ifx\crumbs\empty\else
+  \begin{textblock}{12}(1,1)%
+    \ifnum\value{section}=0\else
+    {\small\ttfamily\crumbs}
+    \ifnum\value{subsection}=0\else
+    \\[6pt]
+    {\quad\scriptsize\ttfamily\color{black}[ \subcrumbs{} ]}
     \fi
-  }
-  \RequirePackage{lastpage}
-  \fancyhead[R]{%
-    \ifnum\value{page}=1\else%
-      \begin{textblock}{4}[1,0](15,1)%
-        {\ttfamily\normalsize {\thepage{}}{\footnotesize{\color{grey}/\pageref{LastPage}}}}
-      \end{textblock}%
-      \ifnum\value{minutes}=0\else%
-        \begin{textblock}{1}[1,0](15.8,0.2)%
-          \tikz{\node[inner sep=2pt,circle,draw=grey]{\color{grey}\scriptsize\ttfamily\theminutes{}};}
-        \end{textblock}%
-      \fi
     \fi
-  }
+  \end{textblock}%
+  \fi
+}
+\RequirePackage{lastpage}
+\fancyhead[R]{%
+  \ifnum\value{page}=1\else%
+  \begin{textblock}{4}[1,0](15,1)%
+  {\ttfamily\normalsize {\thepage{}}{\footnotesize{\color{black}/\pageref{LastPage}}}}
+  \end{textblock}%
+  \ifnum\value{minutes}=0\else%
+  \begin{textblock}{1}[1,0](15.8,0.2)%
+    \tikz{\node[inner sep=2pt,circle,draw=grey]{\color{black}\scriptsize\ttfamily\theminutes{}};}
+  \end{textblock}%
+  \fi
+  \fi
+}
 
 \newcommand\innoLeft[1]{%
   \fancyfoot[L]{%
     \ifnum\value{page}=1\else%
-      \begin{textblock}{8}[0,1](1,15)%
-        {\color{grey}\scriptsize\ttfamily #1}
-      \end{textblock}%
+    \begin{textblock}{8}[0,1](1,15)%
+    {\color{black}\scriptsize\ttfamily #1}
+    \end{textblock}%
     \fi
   }
 }
@@ -127,17 +127,17 @@
 \newcommand\innoRight[1]{%
   \fancyfoot[R]{%
     \ifnum\value{page}=1\else%
-      \begin{textblock}{8}[1,1](15,15)%
-        {\color{grey}\scriptsize\ttfamily #1}
-      \end{textblock}%
+    \begin{textblock}{8}[1,1](15,15)%
+    {\color{black}\scriptsize\ttfamily #1}
+    \end{textblock}%
     \fi
   }
 }
 
 \AtBeginDocument{%
   \ifwhite\else
-    \pagecolor{black}
-    \color{white}
+  \pagecolor{white}
+  \color{black}
   \fi
   \raggedbottom%
   \raggedright%
